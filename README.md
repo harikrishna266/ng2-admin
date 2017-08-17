@@ -2,7 +2,16 @@
 
 ## Tested only on chrome
 
+##Dashboard
+`http://localhost:4200/dashboard`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.4.
+`http://localhost:4200/dashboard`
+
+##Theme
+Edit /theme/red/red.scss 
+refer 
+https://material.io/color/#!/
 
 ## Development server
 
