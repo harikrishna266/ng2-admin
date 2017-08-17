@@ -1,0 +1,27 @@
+<md-card >
+    <md-card-content>
+        <md-tab-group>
+              <md-tab label="Agents">
+                <md-list>
+                      <h3 md-subheader>Folders</h3>
+                      <md-list-item *ngFor="let folder of folders">
+                        <md-icon md-list-icon>folder</md-icon>
+                        <h4 md-line>{{folder.name}}</h4>
+                        <p md-line> {{folder.updated | date}} </p>
+                      </md-list-item>
+                    </md-list>
+              </md-tab>
+              <md-tab label="Deals">
+                <md-list>
+                      <h3 md-subheader>Folders</h3>
+                      <md-list-item *ngFor="let folder of folders">
+                        <md-icon md-list-icon>folder</md-icon>
+                        <h4 md-line>{{folder.name}}</h4>
+                        <p md-line> {{folder.updated | date}} </p>
+                      </md-list-item>
+                      
+                    </md-list>
+              </md-tab>
+            </md-tab-group>
+    </md-card-content>
+</md-card>

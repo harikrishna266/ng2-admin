@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+
+$custom-typography: mat-typography-config(
+    $font-family: Roboto,  
+    $headline: mat-typography-level(14px, 14px, 300),
+    $body-1: mat-typography-level(14px, 14px, 300),
+    $subheading-1:mat-typography-level(14px, 14px, 300),
+    $subheading-2 :mat-typography-level(14px, 14px, 300),
+    $button:mat-typography-level(14px, 14px, 300)
+);
+
+@include angular-material-typography($custom-typography);

@@ -1,0 +1,21 @@
+<div  class="sidemenu">
+    <md-list>
+        <ng-container *ngFor="let menu of menus" >
+            <md-list-item (click)="menu.open = !menu.open" class="primary" [ngClass]="{opened:menu.open}">
+                <md-icon md-list-icon>{{menu?.icon}}</md-icon>
+                <h4 md-line>{{menu?.name}}</h4>                    
+                <md-chip-list *ngIf="menu?.chip?.value" ><md-chip selected="true" [color]='menu?.chip?.color'>{{menu?.chip?.value}}</md-chip> </md-chip-list>
+            </md-list-item>
+            <md-list  class="ripple"  md-ripple  [ngClass]="{open:menu.open,close:!menu.open}" class="secondarymenu">
+                <md-list-item *ngFor="let row of menu?.sub">
+                    <md-icon  md-list-icon>{{row.icon}}</md-icon>
+                        <h4 md-line>{{row.name}}</h4>
+                    <md-chip-list >
+                    <md-chip-list *ngIf="row?.chip" ><md-chip selected="true" [color]='row?.color'>{{row?.value}}</md-chip> </md-chip-list>
+                    </md-chip-list>
+                </md-list-item>
+            </md-list>
+        </ng-container>
+    </md-list>
+</div>
+

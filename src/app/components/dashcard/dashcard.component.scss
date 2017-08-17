@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+@mixin dashcard($theme) {
+    $primary: map-get($theme, primary);
+    .dashcard{
+        margin-bottom: 10px;
+        background: #cfcfcf;
+    }    
+}
+
+
+
+.icon_back{
+    position: absolute;
+    font-size: 81px;
+    top: 0px;
+    right: 0px;
+    width: 86px;
+    height: 86px;
+    opacity: .4;
+}

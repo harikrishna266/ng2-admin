@@ -1,0 +1,27 @@
+
+ <md-sidenav-container  fullscreen class="container">
+    <md-sidenav mode="side" opened="true"  [ngClass]="{small:helpMenuOpen,extra:!helpMenuOpen}"    >
+            <div class="sidenav">
+                <md-toolbar color="primary" class="logoHolder" style="height:40px" >
+                     <img class="logo" src="http://codetok.com/images/ctk-logo.png">
+                    <!-- <img class="title" *ngIf="!helpMenuOpen" src="https://fury.martinsuess.com/assets/img/logo.png"> -->
+                    <h1 *ngIf="!helpMenuOpen" class="title" style="line-height: 67px;font-size:33px;">CODETOK<span style="font-size: 15px;">.com</span></h1>
+                </md-toolbar >
+                <app-sidemenu [menus]="menus"></app-sidemenu>                
+            </div>
+        
+    </md-sidenav>
+    <md-toolbar color="primary">
+        <button md-icon-button (click)="helpMenuOpen=!helpMenuOpen">
+          <i class="material-icons app-toolbar-menu">menu</i>
+        </button>￼                        
+    </md-toolbar>
+    <div style="padding:15px 5px;">   
+         <router-outlet >
+         
+        
+        </router-outlet> 
+    </div>
+</md-sidenav-container>
+  
+

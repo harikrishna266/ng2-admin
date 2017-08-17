@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+@import '~app/elements/sidemenu/sidemenu.component.scss';
+@import '~app/components/dashcard/dashcard.component.scss';
+@import '~app/app.component.scss';
+@include mat-core();
+
+$primary-app-primary: mat-palette($mat-light-blue,900);
+
+
+.sidemenu{
+    $sidebar-app-primary: mat-palette($mat-light-blue,900);
+    $sidebar-app-accent:  mat-palette($mat-light-blue, A200, A100, A400);
+    $sidebar-app-theme:   mat-dark-theme($sidebar-app-primary, $sidebar-app-accent);
+    @include sidemenu($sidebar-app-theme);
+    @include mat-list-theme($sidebar-app-theme);
+}
+
+$primary-app-accent:  mat-palette($mat-light-blue , 500);
+$primary-app-warn:    mat-palette($mat-light-blue );
+$primary-app-theme:   mat-light-theme($primary-app-primary, $primary-app-accent,$primary-app-warn);
+
+
+@include dashcard($primary-app-theme);
+@include sidemenu($primary-app-theme);
+@include sidenav($primary-app-theme);
+@include angular-material-theme($primary-app-theme);
+

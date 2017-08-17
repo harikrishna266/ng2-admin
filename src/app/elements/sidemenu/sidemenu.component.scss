@@ -1,0 +1,55 @@
+@import '~@angular/material/theming';
+
+@mixin sidemenu($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    .primary{
+        background: mat-color($primary,800);    
+    }
+    .secondarymenu{
+         background: mat-color($primary,700);        
+    }
+    .primary:hover{
+         background: mat-color($primary,700);                
+    }
+    .opened {
+        background: mat-color($primary,700);                
+    }
+}
+app-sidemenu{
+    md-icon{
+        font-size:20px !important;
+        height:20px !important;
+        width: 20px !important;
+    }
+    md-list {
+        cursor:pointer;
+    }
+    md-list>md-list>md-list-item{
+        padding-left:20px;    
+
+    }
+    md-list>md-list-item{
+        box-shadow: 0 3px 1px 1px rgba(0,0,0,.1) inset, 0 2px 2px 0 rgba(0,0,0,.14) inset, 0 1px 5px 0 rgba(0,0,0,.12) inset; 
+    }
+    md-list:last-child{
+         box-shadow: 0 3px 1px 1px rgba(0,0,0,.1) ;
+    }
+    .mat-chip.mat-chip-selected.mat-accent{
+        height: 16px;
+        padding:2px 6px 2px 6px;    
+    }
+    .secondarymenu{
+        transition:  max-height .5s ease;
+        max-height: 0px; 
+        position:relative;
+        padding: 0px; 
+    }
+    .open{
+       max-height: 600px; 
+    }   
+    .close {
+        max-height: 0px; 
+    }    
+}
+
